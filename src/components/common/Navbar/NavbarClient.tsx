@@ -35,9 +35,7 @@ const NavbarClient = () => {
   return (
     <div className="border-b w-full xl:h-[70px] sm:h-[60px] h-[55px] bg-white flex justify-center fixed top-0 left-0 right-0 z-50">
       <div className="w-full h-full max-w-[1536px] flex items-center justify-between xl:px-[30px] sm:px-[20px] px-[15px]">
-        {/* Left Section */}
         <div className="flex items-center sm:gap-[50px] gap-[20px]">
-          {/* Mobile Menu Button */}
           <MobileNavSheet
             handleMobileLinkClick={handleMobileLinkClick}
             pathname={pathname}
@@ -45,13 +43,9 @@ const NavbarClient = () => {
             isMobileMenuOpen={isMobileMenuOpen}
             setIsMobileMenuOpen={setIsMobileMenuOpen}
           />
-
-          {/* Logo */}
           <div className="border w-[150px] h-[45px] flex items-center justify-center font-heading text-lg font-semibold">
             LOGO
           </div>
-
-          {/* Desktop Nav Links */}
           <nav className="hidden lg:block">
             <ul className="flex items-center gap-[30px] text-[14px] font-heading font-semibold">
               {navbarLinks.map((link, index) => (
@@ -118,8 +112,6 @@ const NavbarClient = () => {
             </ul>
           </nav>
         </div>
-
-        {/* Cart Section */}
         <CartSheet />
       </div>
     </div>
