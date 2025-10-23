@@ -26,7 +26,11 @@ const MobileNavSheet: React.FC<MobileNavSheetProps> = ({
   pathname,
 }) => {
   return (
-    <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+    <Sheet
+      modal={false}
+      open={isMobileMenuOpen}
+      onOpenChange={setIsMobileMenuOpen}
+    >
       <SheetTrigger asChild>
         <button className="lg:hidden block cursor-pointer">
           <Menu size={22} />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar/Navbar";
+import Footer from "@/components/common/Footer/Footer";
 
 // Font setup
 const montserrat = Montserrat({
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
