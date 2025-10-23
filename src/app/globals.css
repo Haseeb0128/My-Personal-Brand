@@ -167,6 +167,12 @@
   .scroll-hidden::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+
+  /* Prevent body scroll when sheet is open */
+  .sheet-open {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 body {

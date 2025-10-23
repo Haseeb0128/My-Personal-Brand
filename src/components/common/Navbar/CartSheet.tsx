@@ -15,7 +15,7 @@ import React from "react";
 
 const CartSheet = () => {
   return (
-    <Sheet modal={false}>
+    <Sheet modal={true}>
       <SheetTrigger asChild>
         <button className="cursor-pointer relative mr-[10px]">
           <p className="absolute w-[20px] h-[20px] rounded-full text-white bg-black top-[-12px] right-[-15px] flex items-center justify-center font-body text-[11px]">

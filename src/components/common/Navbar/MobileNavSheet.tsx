@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import { MobileNavSheetProps } from "@/constants/interfaces";
 import { navbarLinks } from "@/constants/nav-links";
+import { useBodyScrollLock } from "@/hooks/useBodyScrollLock";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -25,9 +26,12 @@ const MobileNavSheet: React.FC<MobileNavSheetProps> = ({
   handleMobileLinkClick,
   pathname,
 }) => {
+  // Use the body scroll lock hook
+  useBodyScrollLock(isMobileMenuOpen);
+
   return (
     <Sheet
-      modal={false}
+      modal={true}
       open={isMobileMenuOpen}
       onOpenChange={setIsMobileMenuOpen}
     >

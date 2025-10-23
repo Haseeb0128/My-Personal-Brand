@@ -5,6 +5,7 @@ import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useBodyScrollLock } from "@/hooks/useBodyScrollLock";
 
 function Sheet({
   modal = true,
@@ -13,11 +14,17 @@ function Sheet({
 }: React.ComponentProps<typeof SheetPrimitive.Root> & {
   showOverlay?: boolean;
 }) {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  // Use the body scroll lock hook
+  useBodyScrollLock(isOpen);
+
   return (
     <SheetPrimitive.Root
       data-slot="sheet"
       modal={modal}
       data-show-overlay={showOverlay}
+      onOpenChange={setIsOpen}
       {...props}
     />
   );
