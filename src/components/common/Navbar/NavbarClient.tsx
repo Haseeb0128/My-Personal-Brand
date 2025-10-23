@@ -33,7 +33,10 @@ const NavbarClient = () => {
   };
 
   return (
-    <div className="border-b w-full xl:h-[70px] sm:h-[60px] h-[55px] bg-white flex justify-center fixed top-0 left-0 right-0 z-50">
+    <div className="border-b w-full xl:h-[70px] sm:h-[60px] h-[55px] bg-white flex flex-col items-center fixed top-0 left-0 right-0 z-50">
+      {/* <div className="w-full flex justify-center bg-black text-white text-[12px] font-heading font-semibold">
+        <p>Free Delivery Nationwide</p>
+      </div> */}
       <div className="w-full h-full max-w-[1536px] flex items-center justify-between xl:px-[30px] sm:px-[20px] px-[15px]">
         <div className="flex items-center sm:gap-[50px] gap-[20px]">
           <MobileNavSheet
@@ -60,12 +63,11 @@ const NavbarClient = () => {
               data-[state=open]:bg-transparent 
               data-[state=open]:hover:bg-transparent
               data-[state=open]:focus:bg-transparent
-              focus:text-current active:text-current
               transition-colors duration-200
               ${
                 pathname === link.path
-                  ? "text-[#a4a4a4]"
-                  : "text-black hover:text-[#a4a4a4]"
+                  ? "text-[#a4a4a4] hover:text-[#a4a4a4]! focus:text-[#a4a4a4]! active:text-[#a4a4a4]!"
+                  : "text-black hover:text-[#a4a4a4]! focus:text-[#a4a4a4]! active:text-[#a4a4a4]!"
               }`}
                           >
                             <span
