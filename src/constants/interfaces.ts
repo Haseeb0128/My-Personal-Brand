@@ -2,7 +2,6 @@
 export interface MobileNavSheetProps {
   isMobileMenuOpen: boolean;
   setIsMobileMenuOpen: (open: boolean) => void;
-  handleShopMobileLinkClick: () => void;
   handleMobileLinkClick: () => void;
   pathname: string;
 }
@@ -72,4 +71,35 @@ export interface SocialLink {
   name: string;
   path: string;
   icon: string;
+}
+
+export interface LogoProps {
+  className?: string;
+}
+
+export interface ProductCardProps {
+  name: string;
+  oldPrice?: number;
+  price: number;
+  rating: number;
+  imageUrl?: string;
+  isOnSale?: boolean;
+  isSoldOut?: boolean;
+  productSlug: string;
+}
+
+export interface SelectOption {
+  label: string;
+  value: string;
+}
+
+export interface SelectFieldProps {
+  label?: string;
+  placeholder?: string;
+  options: SelectOption[];
+  value?: string;
+  onChange?: (value: string) => void;
+  disabled?: boolean;
+  selectClassName?: string;
+  className?: string;
 }

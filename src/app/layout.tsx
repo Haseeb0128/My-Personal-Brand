@@ -20,7 +20,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "My E-Commerce Site",
+  title: "Roshni.pk",
   description: "Modern e-commerce built with Next.js",
 };
 

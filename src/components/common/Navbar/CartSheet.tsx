@@ -17,8 +17,8 @@ const CartSheet = () => {
   return (
     <Sheet modal={true}>
       <SheetTrigger asChild>
-        <button className="cursor-pointer relative mr-[10px]">
-          <p className="absolute w-[20px] h-[20px] rounded-full text-white bg-black top-[-12px] right-[-15px] flex items-center justify-center font-body text-[11px]">
+        <button className="cursor-pointer relative mr-2.5">
+          <p className="absolute w-5 h-5 rounded-full text-white bg-black -top-3 right-[-15px] flex items-center justify-center font-body text-[11px]">
             10
           </p>
           <Handbag size={22} />
